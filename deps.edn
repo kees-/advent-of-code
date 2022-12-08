@@ -1,6 +1,10 @@
 {:paths ["src"]
  :deps  {clj-http/clj-http {:mvn/version "3.12.3"}}
- :aliases {:clerk {:extra-deps {io.github.nextjournal/clerk {:mvn/version "0.12.699"}}}
+ :aliases {:reveal {:extra-deps {vlaaad/reveal {:mvn/version "1.3.276"}}
+                    :main-opts ["-m" "nrepl.cmdline"
+                                "--middleware" "[vlaaad.reveal.nrepl/middleware,cider.nrepl/cider-middleware]"]
+                    :jvm-opts ["-Dvlaaad.reveal.prefs={:theme,:light,:font-family,\"Fira Code\",:font-size,14}"]}
+           :clerk {:extra-deps {io.github.nextjournal/clerk {:mvn/version "0.12.699"}}}
            :build-notebooks {:extra-deps {io.github.nextjournal/clerk {:mvn/version "0.12.699"}}
                              :exec-fn nextjournal.clerk/build!
                              :exec-args {:paths ["src/aoc/clerk/week_1/day_05.clj"]}}}}
