@@ -1,0 +1,6 @@
+{:paths ["src"]
+ :deps  {clj-http/clj-http {:mvn/version "3.12.3"}}
+ :aliases {:clerk {:extra-deps {io.github.nextjournal/clerk {:mvn/version "0.12.699"}}}
+           :build-notebooks {:extra-deps {io.github.nextjournal/clerk {:mvn/version "0.12.699"}}
+                             :exec-fn nextjournal.clerk/build!
+                             :exec-args {:paths ["src/aoc/clerk/week_1/day_05.clj"]}}}}
