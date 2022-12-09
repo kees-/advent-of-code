@@ -3,9 +3,10 @@
             [clj-http.client :as http]
             [clojure.java.io :as io]))
 
-(def sl clojure.string/split-lines)
-(def s clojure.string/split)
+(def sl "[s] Abbreviation for clojure.string/split-lines" clojure.string/split-lines)
+(def s "[s re] [s re limit] Abbreviation for clojure.string/split" clojure.string/split)
 
+;; ========== SITE-SPECIFIC ====================================================
 ;; session=...
 (def cookie
   (slurp "assets/cookie.txt"))
@@ -23,8 +24,10 @@
            (spit file)))
     (slurp file)))
 
-;; Integer/parseInt doesn't work well anonymously on sequences
+;; ========== GENERAL PURPOSE FNS ==============================================
+;; Integer/parseInt doesn't map anonymously on sequences well
 (defn str->int
+  "Coerce string to integer"
   [s]
   (Integer/parseInt s))
 
