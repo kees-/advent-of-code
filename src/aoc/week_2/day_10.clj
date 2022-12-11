@@ -35,7 +35,7 @@
 ;; and visual issues will occur at vertical boundaries.
 (defn draw
   "Depict a string representation of an imaginary screen of dimensions x,y.
-   THe proximity of the register to the cycle count makes pixels hot."
+   The proximity of the register to the cycle count makes pixels hot."
   [history x y]
   (let [draw-step (fn [[cyc reg]]
                     (let [sprite (take y (iterate #(+ x %) reg))]
@@ -63,4 +63,5 @@
   ;;     "███  █    █ ██ █    █ █  ████  █   █ ██ "
   ;;     "█    █    █  █ █    █ █  █  █ █    █  █ "
   ;;     "█    ████  ███ █    █  █ █  █ ████  ███ ") 
+  ;; Note the top right.
   )
