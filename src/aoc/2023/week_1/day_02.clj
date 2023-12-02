@@ -2,24 +2,22 @@
   (:require [aoc.util :as util]
             [clojure.edn :as edn]))
 
-(defonce input
-  (let [->pair #(mapv edn/read-string (util/s % #"\s"))]
-    (->> (util/get-input 2023 2)
+(defonce input (util/get-input 2023 2))
+
+(def data
+  (let [->pair #(map edn/read-string (util/s % #"\s"))]
+    (->> input
          util/sl
          (map (comp #(map ->pair %)
                     #(re-seq #"\d+\s\w" %))))))
 
 (defn test-maxes
-  [[n c]]
-  (<= n ({'r 12 'g 13 'b 14} c)))
-
-(defn high-color
-  [v]
-  (reduce max (map first v)))
+  [[n color]]
+  (<= n ({'r 12 'g 13 'b 14} color)))
 
 (comment
   ; 2771
-  (->> input
+  (->> data
        (map (comp #(every? true? %)
                   #(map test-maxes %)))
        (zipmap (rest (range)))
@@ -28,9 +26,7 @@
        (reduce +))
 
   ; 70924
-  (->> input
-       (map (comp #(apply * %)
-                  vals
-                  #(update-vals % high-color)
-                  #(group-by second %)))
+  (->> data
+       (map (comp #(apply * (vals %))
+                  #(util/pairs->map % (partial reduce max))))
        (reduce +)))

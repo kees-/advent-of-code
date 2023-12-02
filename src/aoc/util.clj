@@ -42,3 +42,12 @@
      (if (pred (first s))
        (cons (first s) nil)
        (cons (first s) (take-until pred (rest s)))))))
+
+(defn pairs->map
+  "Given a list of pairs, regroup into a map of values to list of keys.
+   fs are 1-arity collection operations that subsequently map onto the vals."
+  [coll & fs]
+  (let [operations (reverse (into [#(map first %)] fs))
+        f (apply comp operations)]
+    (-> (group-by second coll)
+        (update-vals f))))
