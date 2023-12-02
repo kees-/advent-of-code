@@ -1,8 +1,8 @@
-(ns aoc.week-2.day-09
+(ns aoc.2022.week-2.day-09
   (:require [aoc.util :as util]))
 
 (defonce input
-  (util/get-input 9))
+  (util/get-input 2022 9))
 
 (def instructions
   (->> input

@@ -1,9 +1,9 @@
-(ns aoc.week-2.day-13
+(ns aoc.2022.week-2.day-13
   (:require [aoc.util :as util]
             [clojure.edn :as edn]))
 
 (defonce input
-  (util/get-input 13))
+  (util/get-input 2022 13))
 
 (def packets
   (->> (util/s input #"\n+")

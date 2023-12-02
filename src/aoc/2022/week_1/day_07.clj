@@ -1,9 +1,9 @@
-(ns aoc.week-1.day-07
+(ns aoc.2022.week-1.day-07
   (:require [aoc.util :as util]))
 
 ;; Raw string input
 (defonce input
-  (util/get-input 7))
+  (util/get-input 2022 7))
 
 ;; Since ls is the only shell command with output, no need to be parsed
 ;; cd tries all dirs so parsing "dir ..." lines is redundant

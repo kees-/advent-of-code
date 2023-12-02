@@ -1,5 +1,6 @@
 {:paths ["src"]
- :deps  {clj-http/clj-http {:mvn/version "3.12.3"}}
+ :deps  {clj-http/clj-http {:mvn/version "3.12.3"}
+         net.mikera/core.matrix {:mvn/version "0.63.0"}}
  :aliases {:reveal {:extra-deps {vlaaad/reveal {:mvn/version "1.3.276"}}
                     :main-opts ["-m" "nrepl.cmdline"
                                 "--middleware" "[vlaaad.reveal.nrepl/middleware,cider.nrepl/cider-middleware]"]

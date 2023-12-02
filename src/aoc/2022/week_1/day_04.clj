@@ -1,10 +1,10 @@
-(ns aoc.week-1.day-04
+(ns aoc.2022.week-1.day-04
   (:require [aoc.util :as util]
             [clojure.edn :as edn]
             [clojure.set :as set]))
 
 (defonce input
-  (util/get-input 4))
+  (util/get-input 2022 4))
 
 (defn ranges
   [[a b c d]]

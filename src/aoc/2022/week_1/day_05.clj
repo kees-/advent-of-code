@@ -1,8 +1,8 @@
-(ns aoc.week-1.day-05
+(ns aoc.2022.week-1.day-05
   (:require [aoc.util :as util]))
 
 (defonce input
-  (util/get-input 5))
+  (util/get-input 2022 5))
 
 (defonce big-input
   (slurp "assets/05-big.txt"))

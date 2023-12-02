@@ -1,8 +1,8 @@
-(ns aoc.week-2.day-10
+(ns aoc.2022.week-2.day-10
   (:require [aoc.util :as util]))
 
 (defonce input
-  (util/get-input 10))
+  (util/get-input 2022 10))
 
 (def instructions
   "Flat seq of ints and keyword :skip, representing the two CPU instructions."

@@ -1,9 +1,9 @@
-(ns aoc.week-2.day-11
+(ns aoc.2022.week-2.day-11
   (:require [aoc.util :as util]
             [clojure.math :as math]))
 
 (defonce input
-  (util/get-input 11))
+  (util/get-input 2022 11))
 
 (def regexes
   "Regexes for parsing data from each monkey string."

@@ -1,4 +1,4 @@
-(ns aoc.week-1.day-01
+(ns aoc.2022.week-1.day-01
   (:require [clojure.java.io :as io]
             [aoc.util :as util]))
 
@@ -7,7 +7,7 @@
   )
 
 (defonce input
-  (util/get-input 1))
+  (util/get-input 2022 1))
 
 (comment
   (->> (util/s input #"\n\n")

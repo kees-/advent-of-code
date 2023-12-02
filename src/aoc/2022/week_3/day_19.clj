@@ -1,8 +1,8 @@
-(ns aoc.week-3.day-19
+(ns aoc.2022.week-3.day-19
   (:require [aoc.util :as util]))
 
 (defonce input
-  (util/get-input 19))
+  (util/get-input 2022 19))
 
 (def blueprints
   "Maps of the resource costs for each type of robot."

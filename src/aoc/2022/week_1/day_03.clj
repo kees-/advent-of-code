@@ -1,9 +1,9 @@
-(ns aoc.week-1.day-03
+(ns aoc.2022.week-1.day-03
   (:require [aoc.util :as util]
             [clojure.set :as set]))
 
 (defonce input
-  (util/get-input 3))
+  (util/get-input 2022 3))
 
 (defn cleave
   [c]

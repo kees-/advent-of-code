@@ -1,8 +1,8 @@
-(ns aoc.week-1.day-02
+(ns aoc.2022.week-1.day-02
   (:require [aoc.util :as util]))
 
 (defonce input
-  (util/get-input 2))
+  (util/get-input 2022 2))
 
 (def scores-1
   {"A X" (+ 1 3)

@@ -9,13 +9,13 @@
 ;; ========== SITE-SPECIFIC ====================================================
 ;; session=...
 (def cookie
-  (slurp "assets/cookie.txt"))
+  (slurp "assets/token"))
 
 (defn get-input
   "Digit 1-25 retrieves daily AOC input."
-  [day]
-  (let [file (format "assets/%02d.txt" day)
-        url (format "https://adventofcode.com/2022/day/%s/input" day)]
+  [year day]
+  (let [file (format "assets/%s/%02d.txt" year day)
+        url (format "https://adventofcode.com/%s/day/%s/input" year day)]
     (when-not (.exists (io/file file))
       (println "Attempting to grab input from adventofcode.com...")
       (->> (http/get url

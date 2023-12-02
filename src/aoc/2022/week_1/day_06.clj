@@ -1,8 +1,8 @@
-(ns aoc.week-1.day-06
+(ns aoc.2022.week-1.day-06
   (:require [aoc.util :as util]))
 
 (defonce input
-  (util/get-input 6))
+  (util/get-input 2022 6))
 
 (defn start-of-message
   [s n]
